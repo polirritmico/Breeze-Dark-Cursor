@@ -1,6 +1,6 @@
 # Breeze Dark Cursor
 
-Dark version of the deafault KDE Breeze cursor.
+Dark version of the default KDE Breeze cursor.
 
 ## Installation
 
