@@ -1,3 +1,17 @@
+# Breeze Dark Cursor
+
+Dark version of the deafault KDE Breeze cursor.
+
+## Installation
+
+Just copy the folder Breeze_Dark into your local icon folder:
+
+```command
+Breeze-Dark-Cursor $ cp -r Breeze_Dark ~/.local/share/icons/
+```
+
+## Build
+
 Building the Bridge Icon set from the Inkscape SVG:
 
 1. Ensure you have inkscape and xcursorgen installed.
@@ -13,3 +27,8 @@ beleive it impacts all versions of X, or Wayland.
 
 You will need the “X11 Mouse Cursor (XMC)” plugin for GIMP installed to trim
 the cursors if you choose to do so.
+
+---
+
+**This is just a simple modification of the original theme from grey to black color.
+All credits to the original creators.**
