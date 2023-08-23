@@ -6,9 +6,25 @@ Dark version of the default KDE Breeze cursor.
 
 Just copy the folder Breeze_Dark into your local icon folder:
 
+* With Dolphin:
+
+1. Right click on the downloaded `tar.gz` file. `Extract` -> `Extract archive here`.
+2. Copy the extracted directory `Breeze_Dark`
+3. Go to `~/.local/share/icons`. (`~` is the same as `/home/your_username/`)
+4. Paste the folder.
+
+* **From the command line:**
+
 ```command
-Breeze-Dark-Cursor $ cp -r Breeze_Dark ~/.local/share/icons/
+$ tar xzf Breeze_dark_v1.0.tar.gz
+$ cp -r Breeze_Dark ~/.local/share/icons/
 ```
+## Set the theme
+
+Then simply select the theme in the `Cursors` sections of the System settings:
+
+1. Go to `System settings` -> `Appearance` -> `Cursors`. Select **Breeze Dark**.
+2. Restart the system
 
 ## Build
 
