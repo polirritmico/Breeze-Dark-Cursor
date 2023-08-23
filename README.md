@@ -2,6 +2,8 @@
 
 Dark version of the default KDE Breeze cursor.
 
+![Breeze Dark Cursor](src/cursors.svg "Breeze Dark Cursor") 
+
 ## I. Installation
 
 Just copy the folder Breeze_Dark into your local icon folder:
