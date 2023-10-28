@@ -40,13 +40,19 @@ echo -e "Checking Requirements... DONE"
 
 
 echo -ne "Making Folders... $BASENAME\\r"
+DIR4X="build/x4"
+DIR2_66X="build/x2_66"
 DIR2X="build/x2"
 DIR1_5X="build/x1_5"
+DIR1_33X="build/x1_33"
 DIR1X="build/x1"
 OUTPUT="$(grep --only-matching --perl-regex "(?<=Name\=).*$" $INDEX)"
 OUTPUT=${OUTPUT// /_}
+mkdir -p "$DIR4X"
+mkdir -p "$DIR2_66X"
 mkdir -p "$DIR2X"
 mkdir -p "$DIR1_5X"
+mkdir -p "$DIR1_33X"
 mkdir -p "$DIR1X"
 mkdir -p "$OUTPUT/cursors"
 echo 'Making Folders... DONE';
@@ -61,15 +67,15 @@ for CUR in src/config/*.cursor; do
 	echo -ne "\033[0KGenerating simple cursor pixmaps... $BASENAME\\r"
 
 	if [ "$DIR1X/$BASENAME.png" -ot $RAWSVG ] ; then
-		inkscape $RAWSVG -i $BASENAME -w 32 -h 32 -o "$DIR1X/$BASENAME.png" > /dev/null
+		inkscape $RAWSVG -i $BASENAME -w 32 -h 32 -o "$DIR1_33X/$BASENAME.png" > /dev/null
 	fi
 
 	if [ "$DIR1_5X/$BASENAME.png" -ot $RAWSVG ] ; then
-		inkscape $RAWSVG -i $BASENAME -w 48 -h 48 -o "$DIR1_5X/$BASENAME.png" > /dev/null
+		inkscape $RAWSVG -i $BASENAME -w 48 -h 48 -o "$DIR2X/$BASENAME.png" > /dev/null
 	fi
 
 	if [ "$DIR2X/$BASENAME.png" -ot $RAWSVG ] ; then
-		inkscape $RAWSVG -i $BASENAME -w 64 -h 64 -o "$DIR2X/$BASENAME.png" > /dev/null
+		inkscape $RAWSVG -i $BASENAME -w 64 -h 64 -o "$DIR2_66X/$BASENAME.png" > /dev/null
 	fi
 done
 echo -e "\033[0KGenerating simple cursor pixmaps... DONE"
@@ -81,27 +87,27 @@ do
 	echo -ne "\033[0KGenerating animated cursor pixmaps... $i / 23 \\r"
 
 	if [ "$DIR1X/progress-$i.png" -ot $RAWSVG ] ; then
-		inkscape $RAWSVG -i progress-$i -w 32 -h 32 -o "$DIR1X/progress-$i.png" > /dev/null
+		inkscape $RAWSVG -i progress-$i -w 32 -h 32 -o "$DIR1_33X/progress-$i.png" > /dev/null
 	fi
 
     if [ "$DIR1_5X/progress-$i.png" -ot $RAWSVG ] ; then
-        inkscape $RAWSVG -i progress-$i -w 48 -h 48 -o "$DIR1_5X/progress-$i.png" > /dev/null
+        inkscape $RAWSVG -i progress-$i -w 48 -h 48 -o "$DIR2X/progress-$i.png" > /dev/null
 	fi
 
 	if [ "$DIR2X/progress-$i.png" -ot $RAWSVG ] ; then
-		inkscape $RAWSVG -i progress-$i -w 64 -h 64 -o "$DIR2X/progress-$i.png" > /dev/null
+		inkscape $RAWSVG -i progress-$i -w 64 -h 64 -o "$DIR2_66X/progress-$i.png" > /dev/null
 	fi
 
 	if [ "$DIR1X/wait-$i.png" -ot $RAWSVG ] ; then
-		inkscape $RAWSVG -i wait-$i -w 32 -h 32 -o "$DIR1X/wait-$i.png" > /dev/null
+		inkscape $RAWSVG -i wait-$i -w 32 -h 32 -o "$DIR1_33X/wait-$i.png" > /dev/null
 	fi
 
 	if [ "$DIR1_5X/wait-$i.png" -ot $RAWSVG ] ; then
-		inkscape $RAWSVG -i wait-$i -w 48 -h 48 -o "$DIR1_5X/wait-$i.png" > /dev/null
+		inkscape $RAWSVG -i wait-$i -w 48 -h 48 -o "$DIR2X/wait-$i.png" > /dev/null
 	fi
 
 	if [ "$DIR2X/wait-$i.png" -ot $RAWSVG ] ; then
-		inkscape $RAWSVG -i wait-$i -w 64 -h 64 -o "$DIR2X/wait-$i.png" > /dev/null
+		inkscape $RAWSVG -i wait-$i -w 64 -h 64 -o "$DIR2_66X/wait-$i.png" > /dev/null
 	fi
 done
 echo -e "\033[0KGenerating animated cursor pixmaps... DONE"
