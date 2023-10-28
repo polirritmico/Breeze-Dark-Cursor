@@ -21,7 +21,9 @@ def main():
                 for i in range(3):
                     new_value = int(int(base_data[i]) * proportion)
                     new_line.append(str(new_value))
-                new_line.append(base_data[3])
+                filename = "/" + str(os.path.basename(base_data[3]))
+                file_path = "x" + str(proportion).replace(".", "_") + filename
+                new_line.append(file_path)
                 output_file.append(" ".join(new_line))
         elif len(base_data) == 5:
             # get all base proportion (x1) lines
@@ -32,13 +34,16 @@ def main():
                 if current_line[0] != base_size:
                     break
                 base_data.append(current_line)
+
             for proportion in target_proportions:
                 for line in base_data:
                     new_line = []
                     for i in range(3):
                         new_value = int(int(line[i]) * proportion)
                         new_line.append(str(new_value))
-                    new_line.append(line[3])
+                    filename = "/" + str(os.path.basename(line[3]))
+                    file_path = "x" + str(proportion).replace(".", "_") + filename
+                    new_line.append(file_path)
                     new_line.append(line[4])
                     output_file.append(" ".join(new_line))
         else:
